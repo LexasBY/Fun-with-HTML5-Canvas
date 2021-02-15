@@ -1,8 +1,10 @@
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d'); /* определяем контекст рисования, связанный с холстом - двумерный контекст*/
 const borderSize = 5;
+const controlPanel = document.querySelector('.control_panel');
+const marginTop = 10;
 canvas.width = window.innerWidth - (borderSize * 2);
-canvas.height = window.innerHeight - (borderSize * 31);
+canvas.height = window.innerHeight - (borderSize * 2) - controlPanel.offsetHeight - marginTop;
 
 //ctx.strokeStyle = '#BADA55'; /*задает цвет или стиль, используемый при выполнении обводки фигур */
 ctx.lineJoin = 'round'; /*определяет форму вершин в которых линии сходятся - "round" - скругляет углы*/
